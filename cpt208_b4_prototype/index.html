@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Between Us — B4 Relation between Generations</title>
+  <meta name="description" content="A web prototype for playful intergenerational connection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="theme-light">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Between Us home">
+        <span class="brand-mark">B/U</span>
+        <span class="brand-text">
+          <strong>Between Us</strong>
+          <span>B4 Relation between Generations</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#prototype">Prototype</a>
+        <a href="#features">Features</a>
+        <a href="#scenario">Scenario</a>
+        <a href="portfolio.html">Portfolio</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero section-xl">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">CPT208 / HUMAN-CENTRIC COMPUTING / B4</p>
+          <h1>Designing playful ways for generations to talk, remember, and create together.</h1>
+          <p class="hero-text">
+            <strong>Between Us</strong> is a mobile-first web prototype for grandparents, parents, and children.
+            It uses conversation prompts, memory triggers, and shared time capsules to make family interaction
+            feel lighter, warmer, and easier to start.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#prototype">Try the prototype</a>
+            <a class="button button-outline" href="portfolio.html">Open portfolio</a>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-stat">
+            <span>Focus</span>
+            <strong>Intergenerational connection</strong>
+          </div>
+          <div class="hero-stat">
+            <span>Device</span>
+            <strong>Mobile-first web app</strong>
+          </div>
+          <div class="hero-stat">
+            <span>Mode</span>
+            <strong>Hybrid home + remote use</strong>
+          </div>
+          <div class="hero-note">
+            <p>This page is the <strong>system prototype</strong>. The second page is the <strong>process portfolio</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section border-top">
+      <div class="wrap editorial-grid">
+        <article class="editorial-card">
+          <p class="eyebrow">Problem</p>
+          <h2>Family members often care about each other, but do not always know how to begin meaningful conversation.</h2>
+        </article>
+        <article class="editorial-card">
+          <p class="eyebrow">Opportunity</p>
+          <h2>Playful prompts and co-created digital keepsakes can reduce awkwardness and support emotional connection.</h2>
+        </article>
+        <article class="editorial-card dark-card">
+          <p class="eyebrow">Prototype scope</p>
+          <h2>Conversation cards, memory triggers, emotion responses, and a shared capsule preview.</h2>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="prototype">
+      <div class="wrap prototype-shell">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive prototype</p>
+          <h2>Tap through a lightweight family interaction flow.</h2>
+        </div>
+
+        <div class="prototype-layout">
+          <aside class="prototype-sidebar">
+            <div class="proto-block">
+              <p class="mini-label">1 / Choose a pair</p>
+              <div class="toggle-group" role="tablist" aria-label="Relationship type">
+                <button class="toggle-pill is-active" type="button" data-pair="grandparent">Grandparent × Child</button>
+                <button class="toggle-pill" type="button" data-pair="parent">Parent × Child</button>
+              </div>
+            </div>
+
+            <div class="proto-block">
+              <p class="mini-label">2 / Draw a conversation card</p>
+              <div class="card-deck" id="question-card" aria-live="polite">
+                <span class="card-tag">Prompt</span>
+                <h3>Press the button to draw the first question.</h3>
+              </div>
+              <button class="button button-light button-full" id="draw-question" type="button">Draw a card</button>
+            </div>
+
+            <div class="proto-block">
+              <p class="mini-label">3 / Pick a memory trigger</p>
+              <div class="choice-grid" id="memory-triggers">
+                <button class="choice-chip is-active" type="button" data-trigger="Old photos">Old photos</button>
+                <button class="choice-chip" type="button" data-trigger="A childhood song">A childhood song</button>
+                <button class="choice-chip" type="button" data-trigger="A family meal">A family meal</button>
+                <button class="choice-chip" type="button" data-trigger="A favourite place">A favourite place</button>
+              </div>
+            </div>
+
+            <div class="proto-block">
+              <p class="mini-label">4 / Pick an emotion response</p>
+              <div class="choice-grid" id="emotion-choices">
+                <button class="choice-chip is-active" type="button" data-emotion="Curious">Curious</button>
+                <button class="choice-chip" type="button" data-emotion="Warm">Warm</button>
+                <button class="choice-chip" type="button" data-emotion="Surprised">Surprised</button>
+                <button class="choice-chip" type="button" data-emotion="Proud">Proud</button>
+              </div>
+            </div>
+          </aside>
+
+          <div class="phone-preview">
+            <div class="phone-frame">
+              <div class="phone-topbar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <section class="app-screen">
+                <div class="app-header">
+                  <p class="mini-label" id="pair-label">Grandparent × Child</p>
+                  <h3>Shared Capsule</h3>
+                  <p>A playful draft built from one prompt, one trigger, and one feeling.</p>
+                </div>
+
+                <div class="capsule-preview">
+                  <div class="capsule-line">
+                    <span>Conversation type</span>
+                    <strong id="capsule-pair">Grandparent × Child</strong>
+                  </div>
+                  <div class="capsule-line">
+                    <span>Prompt</span>
+                    <strong id="capsule-question">Waiting for a drawn card…</strong>
+                  </div>
+                  <div class="capsule-line">
+                    <span>Memory trigger</span>
+                    <strong id="capsule-trigger">Old photos</strong>
+                  </div>
+                  <div class="capsule-line">
+                    <span>Emotion</span>
+                    <strong id="capsule-emotion">Curious</strong>
+                  </div>
+                </div>
+
+                <div class="micro-story" id="micro-story">
+                  Today’s capsule invites one older family member and one younger family member to start with old photos,
+                  respond with curiosity, and record a small story they want to keep.
+                </div>
+
+                <div class="screen-actions">
+                  <button class="button button-dark button-full" type="button">Save capsule</button>
+                  <button class="button button-ghost button-full" type="button">Share with family</button>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-heading split-heading">
+          <div>
+            <p class="eyebrow">Three playful features</p>
+            <h2>Simple interactions designed to lower social pressure and invite storytelling.</h2>
+          </div>
+          <p class="section-copy">
+            The system does not try to replace family relationships. It gives them a softer entry point:
+            a reason to ask, answer, laugh, and keep something together.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <p class="feature-index">01</p>
+            <h3>Question Shuffle</h3>
+            <p>Random prompt cards make conversation feel less formal and more playful, especially for family members who do not know how to begin.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-index">02</p>
+            <h3>Memory Trigger</h3>
+            <p>Photos, songs, food, and places give both generations concrete starting points instead of abstract emotional questions.</p>
+          </article>
+          <article class="feature-card">
+            <p class="feature-index">03</p>
+            <h3>Shared Capsule</h3>
+            <p>A tiny co-created record turns one conversation into something visible, savable, and revisitable across time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section border-top" id="scenario">
+      <div class="wrap scenario-grid">
+        <div>
+          <p class="eyebrow">Use scenario</p>
+          <h2>A 10-minute family interaction, designed for everyday life.</h2>
+        </div>
+        <div class="scenario-steps">
+          <article>
+            <span>01</span>
+            <p>A child opens the mobile site before dinner and chooses <strong>Grandparent × Child</strong>.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <p>The system draws a prompt card, then suggests a memory trigger such as <strong>old photos</strong> or <strong>a childhood song</strong>.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <p>Both users pick an emotion, answer the prompt together, and save a short capsule for future sessions.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark section-compact">
+      <div class="wrap cta-band">
+        <div>
+          <p class="eyebrow">Next page</p>
+          <h2>Open the full portfolio structure for research, personas, requirements, alternatives, and reflection.</h2>
+        </div>
+        <a class="button button-light" href="portfolio.html">View portfolio page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p><strong>Between Us</strong> — draft web prototype for CPT208 B4 Relation between Generations.</p>
+      <p>All text is placeholder content for demo purposes and can be replaced later.</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
