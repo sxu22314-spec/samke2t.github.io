@@ -1,0 +1,107 @@
+<section class="section section-dark" id="journey">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">4. User journey map</p>
+        <h2>Mapping pain points across generations</h2>
+      </div>
+      <p class="section-copy">
+        Visualizing the current friction between seniors and children.
+      </p>
+    </div>
+
+    <div class="hero-panel" style="background: var(--panel); padding: 10px;">
+      <style>
+        /* 针对 Journey Map 的局部样式，保持 CSS 干净 */
+        .map-wrapper img { 
+          width: 100%; 
+          border-radius: var(--radius-sm); 
+          cursor: zoom-in; 
+          transition: transform 0.3s ease;
+        }
+        .map-wrapper img:hover { opacity: 0.9; }
+        #map-toggle { display: none; }
+        .map-overlay {
+          position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+          background: rgba(0,0,0,0.9); z-index: 1001;
+          display: none; place-items: center; padding: 40px;
+        }
+        #map-toggle:checked ~ .map-overlay { display: grid; }
+        .map-overlay img { max-height: 90vh; cursor: zoom-out; }
+      </style>
+
+      <div class="map-wrapper">
+        <label for="map-toggle">
+          <img src="../images/User Journey Map.png" alt="User Journey Map" title="Click to enlarge">
+          <div style="text-align:center; font-size: 0.8rem; color: var(--text-soft); padding: 14px;">
+            🔍 Click map to enlarge
+          </div>
+        </label>
+        <input type="checkbox" id="map-toggle">
+        <label for="map-toggle" class="map-overlay">
+          <img src="../images/User Journey Map.png" alt="User Journey Map Enlarged">
+        </label>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="requirements">
+  <div class="wrap">
+    <div class="section-heading">
+      <p class="eyebrow">5. Playful Requirements</p>
+      <h2>3 Must-Haves to bridge the gap</h2>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card">
+        <p class="mini-label" style="color: var(--accent);">Must-Have 1</p>
+        <h3>Async & Sync Mini-Games</h3>
+        <p class="body-copy">
+          Provides low-pressure games like <strong>"Draw&Guess"</strong> or <strong>"Memory Flips"</strong> with integrated voice messaging, allowing generations to interact across time zones.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <p class="mini-label" style="color: var(--accent);">Must-Have 2</p>
+        <h3>Collaborative Memory Puzzles</h3>
+        <p class="body-copy">
+          Turns old family photos into <strong>interactive puzzles</strong>. Solving them together unlocks "Memory Stories," turning static heritage into a shared achievement.
+        </p>
+      </article>
+
+      <article class="feature-card">
+        <p class="mini-label" style="color: var(--accent);">Must-Have 3</p>
+        <h3>The Digital Family Garden</h3>
+        <p class="body-copy">
+          A virtual ecosystem driven by <strong>real-time sensor data</strong>. Uses visual metaphors like a growing tree to symbolize family health and connection.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section border-top" id="field-research">
+  <div class="wrap">
+    <div class="section-heading split-heading">
+      <div>
+        <p class="eyebrow">6. Evidence of life</p>
+        <h2>Field research & site observations</h2>
+      </div>
+      <p class="section-copy">
+        Insights from Suzhou Grand Canal and direct user interviews.
+      </p>
+    </div>
+
+    <div class="editorial-grid">
+      <div class="hero-panel">
+        <img src="../images/evidence1.jpg" alt="Field Study 1" style="aspect-ratio: 4/3; object-fit: cover;">
+        <div class="hero-note"><p>Observing grandparent-grandchild interactions at the Grand Canal.</p></div>
+      </div>
+      <div class="hero-panel">
+        <img src="../images/evidence2.jpg" alt="Field Study 2" style="aspect-ratio: 4/3; object-fit: cover;">
+        <div class="hero-note"><p>User interview with a local senior citizen in Suzhou.</p></div>
+      </div>
+      <div class="hero-panel">
+        <img src="../images/evidence3.jpg" alt="Field Study 3" style="aspect-ratio: 4/3; object-fit: cover;">
+        <div class="hero
